@@ -1,4 +1,4 @@
-TARGETS = problem1 problem2
+TARGETS = problem1 problem2 problem4 problem5
 CC = g++
 
 all: $(TARGETS)
