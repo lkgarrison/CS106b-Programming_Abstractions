@@ -1,0 +1,23 @@
+a) vector<eMailMsg> emailContainer;
+
+b) 
+	void removeSpam(vector<eMailMsg> & emails) {
+		for(int i = 0; i < emails.size(); i++) {
+			if(emails[i].subject.find("SPAM") == 0) {
+				emails.erase(emails.begin() + i);
+				i--; // reset incrementer to account for removal
+			}
+		}
+	}
+
+c) 	One could change the type of the "to" field to be a vector of strings instead of a string. This way, multiple email addresses could be added to the "to" field. Thus, the struct definition would be:
+	struct eMailMsg {
+		vector<string> to;
+		string from;
+		...
+		...
+	};
+
+	To access the last address listed in the "to" field, use:
+		email.to[email.to.size() - 1]
+
