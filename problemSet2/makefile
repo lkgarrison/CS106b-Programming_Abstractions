@@ -1,4 +1,4 @@
-TARGETS = problem2 problem3 
+TARGETS = problem2 problem3 problem4
 
 all: $(TARGETS) 
 
